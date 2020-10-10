@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_home"
+    app:startDestination="@id/community">
+
+    <fragment
+        android:id="@+id/classrooms"
+        android:name="com.benrostudios.educatio.ui.home.classrooms.Classrooms"
+        android:label="classrooms_fragment"
+        tools:layout="@layout/classrooms_fragment" />
+    <fragment
+        android:id="@+id/community"
+        android:name="com.benrostudios.educatio.ui.home.community.Community"
+        android:label="community_fragment"
+        tools:layout="@layout/community_fragment" />
+    <fragment
+        android:id="@+id/marketplace"
+        android:name="com.benrostudios.educatio.ui.home.marketplace.Marketplace"
+        android:label="fragment_marketplace"
+        tools:layout="@layout/fragment_marketplace" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.benrostudios.educatio.ui.home.profile.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

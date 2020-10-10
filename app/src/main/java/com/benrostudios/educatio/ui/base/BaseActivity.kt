@@ -9,14 +9,21 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import com.benrostudios.educatio.utils.Event
+import com.readystatesoftware.chuck.ChuckInterceptor
 
-class BaseActivity : AppCompatActivity() {
+import okhttp3.OkHttpClient
+
+
+open class BaseActivity : AppCompatActivity() {
     private var initOpen: Int = 0
 
     val networkState = MutableLiveData<Event<Boolean>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val client = OkHttpClient.Builder()
+            .addInterceptor(ChuckInterceptor(this))
+            .build()
         networkManager()
         val cm: ConnectivityManager =
             getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -44,7 +51,7 @@ class BaseActivity : AppCompatActivity() {
                 }
 
                 override fun onLost(network: Network) {
-                    Log.d("Base", "Offline " + cm.activeNetwork)
+                    Log.d("Base", "Offline Fake" + cm.activeNetwork)
                     if (cm.activeNetwork == null) {
                         Log.d("Base", "OFFLINE")
                         networkState.postValue(Event(false))
