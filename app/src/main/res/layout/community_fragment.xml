@@ -12,13 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:mt_hint="Custom hint"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:mt_hint="Type anything"
+        app:mt_placeholder="Search"
         app:mt_maxSuggestionsCount="10"
         app:mt_speechMode="true" />
 
@@ -44,5 +45,15 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/community_item"
         app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout what others are learning"
+        android:textColor="@color/light_blue_accent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

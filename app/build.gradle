@@ -82,6 +82,9 @@ dependencies {
     //Search
     implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
 
+    //Card Carousel
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+
 
 
 }
