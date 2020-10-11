@@ -57,7 +57,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
                     android:maxLines="1"
-                    android:text="TextView"
+                    android:text="Hemanth Krishna"
                     android:textSize="18sp" />
 
                 <TextView
@@ -79,7 +79,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
-                    android:text="TextView"
+                    android:text="hemanth@gmail.com"
                     android:textSize="18sp" />
 
                 <TextView
@@ -101,7 +101,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
-                    android:text="TextView"
+                    android:text="19"
                     android:textSize="18sp" />
 
                 <TextView
@@ -123,7 +123,7 @@
                     android:layout_marginLeft="32dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="32dp"
-                    android:text="TextView"
+                    android:text="3"
                     android:textSize="18sp" />
 
 

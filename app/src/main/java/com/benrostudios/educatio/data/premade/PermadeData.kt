@@ -6,9 +6,9 @@ import com.benrostudios.educatio.data.models.Post
 import kotlin.random.Random
 
 val posts: List<Post> = listOf(
-    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, true),
-    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, true),
-    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, true)
+    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, false),
+    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, false),
+    Post(0, "", "Ayan Misha", "Java Course", "12th October 2020", "Dope stuff ngl", 65, false)
 )
 
 val courses: List<Course> = listOf(
@@ -27,3 +27,8 @@ fun generateCourses(courses: List<Course>): MutableList<Classroom> {
     }
     return classrooms
 }
+
+val colors: List<String> = listOf(
+    "#FFB7B2","#FFDAC1","#E2F0CB","#B5EAD7","#C7CEEA","#FFFFBA"
+)
+

@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.benrostudios.educatio.R
+import com.benrostudios.educatio.adapters.RecommendedAdapter
 import com.benrostudios.educatio.adapters.withSimpleAdapter
 import com.benrostudios.educatio.data.premade.courses
 import kotlinx.android.synthetic.main.community_item.*
@@ -17,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_marketplace.*
 
 class Marketplace : Fragment() {
 
+    private lateinit var adapter: RecommendedAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -32,6 +35,7 @@ class Marketplace : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadCourses()
+        loadRecommendedCourses()
     }
 
     @SuppressLint("SetTextI18n")
@@ -45,6 +49,11 @@ class Marketplace : Fragment() {
             itemView.rating_course.text = data.rating.toString()
         }
 
+    }
+
+    private fun loadRecommendedCourses(){
+        adapter = RecommendedAdapter(courses)
+        card_slider_domains.adapter = adapter
     }
 
 }

@@ -7,6 +7,6 @@ data class Post(
     val course: String,
     val date: String,
     val review: String,
-    val likes: Int,
-    val liked: Boolean
+    var likes: Int,
+    var liked: Boolean
 )
