@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.benrostudios.educatio.R
 import com.benrostudios.educatio.adapters.withSimpleAdapter
 import com.benrostudios.educatio.data.premade.posts
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.community_fragment.*
 import kotlinx.android.synthetic.main.community_item.*
 import kotlinx.android.synthetic.main.community_item.view.*
@@ -47,6 +48,10 @@ class Community : Fragment() {
             itemView.date_community.text = data.date
             itemView.course_community.text = data.course
             itemView.likes_community.text = data.likes.toString()
+            Glide.with(requireActivity())
+                .load(data.image)
+                .circleCrop()
+                .into(itemView.profile_pic_community)
             itemView.like_community.setOnClickListener {
                 if (!data.liked) {
                     itemView.like_community.imageTintList = ColorStateList.valueOf(

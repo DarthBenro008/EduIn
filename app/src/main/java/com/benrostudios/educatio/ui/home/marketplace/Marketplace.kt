@@ -12,6 +12,7 @@ import com.benrostudios.educatio.R
 import com.benrostudios.educatio.adapters.RecommendedAdapter
 import com.benrostudios.educatio.adapters.withSimpleAdapter
 import com.benrostudios.educatio.data.premade.courses
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.community_item.*
 import kotlinx.android.synthetic.main.course_item.*
 import kotlinx.android.synthetic.main.course_item.view.*
@@ -47,11 +48,14 @@ class Marketplace : Fragment() {
             itemView.desc_course.text = data.desc
             itemView.price_course.text = "$${data.price}"
             itemView.rating_course.text = data.rating.toString()
+            Glide.with(requireActivity())
+                .load(data.image)
+                .into(itemView.course_imageView)
         }
 
     }
 
-    private fun loadRecommendedCourses(){
+    private fun loadRecommendedCourses() {
         adapter = RecommendedAdapter(courses)
         card_slider_domains.adapter = adapter
     }

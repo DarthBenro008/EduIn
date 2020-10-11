@@ -31,15 +31,14 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_brightness_1_24"
-                app:tint="@color/primary_text_color" />
+             />
 
             <TextView
                 android:id="@+id/community_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/dm_sans_bold"
                 android:text="Hemanth Krishna"
                 android:textSize="16sp"

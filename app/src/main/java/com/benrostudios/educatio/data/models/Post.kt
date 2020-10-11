@@ -2,7 +2,7 @@ package com.benrostudios.educatio.data.models
 
 data class Post(
     val id: Int,
-    val image: String,
+    val image: Int,
     val username: String,
     val course: String,
     val date: String,

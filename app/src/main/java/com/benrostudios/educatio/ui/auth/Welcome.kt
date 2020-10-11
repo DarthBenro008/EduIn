@@ -12,6 +12,7 @@ import com.benrostudios.educatio.MainActivity
 import com.benrostudios.educatio.R
 import com.benrostudios.educatio.ui.home.Home
 import com.benrostudios.educatio.utils.hide
+import com.benrostudios.educatio.utils.show
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -44,6 +45,7 @@ class Welcome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
         google_sing_in_btn.setOnClickListener {
+            progressBar2.show()
             initGoogleSignInClient()
             signIn()
         }
