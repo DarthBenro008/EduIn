@@ -11,6 +11,7 @@ import android.widget.Toast
 import com.benrostudios.educatio.MainActivity
 import com.benrostudios.educatio.R
 import com.benrostudios.educatio.ui.home.Home
+import com.benrostudios.educatio.utils.hide
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -72,6 +73,7 @@ class Welcome : Fragment() {
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 Log.w(TAG, "Google sign in failed", e)
+                progressBar2.hide()
             }
         }
     }
@@ -87,7 +89,7 @@ class Welcome : Fragment() {
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithCredential:failure", task.exception)
-
+                    progressBar2.hide()
                     Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
                 }
             }
