@@ -85,6 +85,9 @@ dependencies {
     //Card Carousel
     implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
 
+    //Star Rating
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+
 
 
 }
