@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/community"
-        android:icon="@drawable/ic_baseline_brightness_1_24"
+        android:icon="@drawable/ic_group"
         android:title="Community" />
     <item
         android:id="@+id/marketplace"
-        android:icon="@drawable/ic_baseline_brightness_1_24"
+        android:icon="@drawable/ic_il_market"
         android:title="Market" />
     <item
         android:id="@+id/classrooms"
-        android:icon="@drawable/ic_baseline_brightness_1_24"
+        android:icon="@drawable/ic_mdi_google_classroom"
         android:title="Classrooms" />
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_brightness_1_24"
+        android:icon="@drawable/ic_baseline_person_24"
         android:title="Profile" />
 
 </menu>
